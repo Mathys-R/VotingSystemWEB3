@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Contract Interface</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Message Contract Interface</h1>
+            <div id="wallet-info">
+                <span id="network"></span>
+                <span id="account"></span>
+                <button id="connect-button">Connecter Wallet</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="contract-section">
+                <h2>MessageContract</h2>
+                <div class="contract-status">
+                    <p>Adresse du contrat: <span id="contract-address">Non connecté</span></p>
+                    <p>Statut: <span id="contract-status">Non connecté</span></p>
+                </div>
+
+                <div class="function-cards">
+                    <!-- Lecture du message -->
+                    <div class="card">
+                        <h3>Lire le message</h3>
+                        <div class="function-form">
+                            <button id="read-message">Lire</button>
+                            <div class="result" id="message-result">Résultat: -</div>
+                        </div>
+                    </div>
+
+                    <!-- Définir un nouveau message -->
+                    <div class="card">
+                        <h3>Définir un message</h3>
+                        <div class="function-form">
+                            <input type="text" id="new-message" placeholder="Nouveau message">
+                            <button id="set-message-button">Définir</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="transaction" class="hidden">
+            <h3>Transaction en cours</h3>
+            <div class="loader"></div>
+            <p id="tx-status">Transaction envoyée...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
