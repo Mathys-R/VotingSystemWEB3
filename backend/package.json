@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@nomicfoundation/ethereumjs-vm": "^7.0.4",
+    "hardhat": "^2.22.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.2.0"
+  }
+}
